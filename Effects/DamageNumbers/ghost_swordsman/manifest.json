@@ -1,0 +1,21 @@
+{
+  "id": "ghost_swordsman_damage_numbers",
+  "asset_type": "combat_damage_digits",
+  "canvas_px": [
+    64,
+    64
+  ],
+  "variants": {
+    "normal": {
+      "path": "normal/digit_{0-9}.png",
+      "style": "amber-gold fill, crimson rim, dark ghost shadow"
+    },
+    "critical": {
+      "path": "critical/digit_{0-9}.png",
+      "style": "white-hot core, red burst glow, gold bevel"
+    }
+  },
+  "palette": "Resurrect-64",
+  "source": "local deterministic generator: tools/generate_damage_numbers.js",
+  "style_reference": "ghost_swordsman frames; DNF-like Korean fantasy combat feedback; normal and critical damage number batches"
+}
