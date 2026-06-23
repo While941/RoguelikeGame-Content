@@ -1,0 +1,23 @@
+# Content（资产）仓库行尾与 LFS 规则
+# 作为子模块挂载于主项目 godot/assets/。文本保持 LF，二进制走 Git LFS。
+
+* text=auto eol=lf
+
+# ── 文本类型显式 LF（随资产一起版本化，不进 LFS）──────────────
+*.import text eol=lf
+*.cfg    text eol=lf
+*.gpl    text eol=lf
+*.json   text eol=lf
+*.tres   text eol=lf
+
+# ── 二进制资源：Git LFS 管理 ────────────────────────────────────
+*.png  filter=lfs diff=lfs merge=lfs -text
+*.jpg  filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.webp filter=lfs diff=lfs merge=lfs -text
+*.res  filter=lfs diff=lfs merge=lfs -text
+*.ttf  filter=lfs diff=lfs merge=lfs -text
+*.otf  filter=lfs diff=lfs merge=lfs -text
+*.wav  filter=lfs diff=lfs merge=lfs -text
+*.ogg  filter=lfs diff=lfs merge=lfs -text
+*.mp3  filter=lfs diff=lfs merge=lfs -text
